@@ -1,0 +1,41 @@
+{% extends "Base.html" %}
+{% load static %}
+{% block title %}Buy{% endblock title %}
+
+{% block body %}
+
+<div style="margin:4px; text-align:center; background-color:peru; padding:10px;">
+    <h1>Buy Your Favorite Books</h1>
+    <h5>Buy books from a vast range of genres at a very pocket-friendly price</h5>
+    <hr>
+</div>
+
+<div class="row">
+    {% for book in books %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            
+            <img src="{{ book.image.url }}" class="d-block w-100" alt="{{ book.title }}" style="height:500px">
+            
+
+
+            <div class="card-body">
+                <p class="card-text">{{ book.title }}</p>
+                <p>{{ book.author }}</p>
+                <p>Price: {{ book.price }} Rs</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="footer text-center mt-4">
+    <a href="#">Back to top</a>
+</div>
+
+{% endblock body %}

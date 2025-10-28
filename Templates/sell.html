@@ -1,0 +1,92 @@
+{% extends "Base.html" %}
+{% block title %}
+Sell
+{% endblock title %}
+{% block body %}
+<div style="margin:4px ;text-align:center;background-color:peru">
+    
+    <h1>Sell your old books</h1>
+    <h5>Looking to give your beloved books a new home? Our platform makes it easy for you to sell your books and connect with potential buyers.  </h5><hr>
+</div>
+<div class="container">
+    <form method="POST" action="{% url 'sell' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="bookname" class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="bookname" name="bookname" required>
+        </div>
+        <div class="mb-3">
+            <label for="sellername" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="sellername" name="sellername" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="bookprice" class="form-label">Price</label>
+            <input type="number" class="form-control" id="bookprice" name="bookprice" required>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="info">Description About the Book</label>
+            <textarea class="form-control" id="info" rows="3" name="info" required></textarea>
+        </div>
+        {% comment %} <div class="mb-3">
+            <label for="image" class="form-label">Upload Book Image</label>
+            <input type="file" class="form-control" id="image" name="image">
+        </div> {% endcomment %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
+
+
+
+
+
+
+{% comment %} {% extends "Base.html" %}
+{% block title %}
+sell
+{% endblock title %}
+{% block body %}
+<div style="margin:4px ;text-align:center;background-color:peru">
+    
+    <h1>Sell your old books</h1>
+    <h5>Looking to give your beloved books a new home? Our platform makes it easy for you to sell your books and connect with potential buyers.  </h5><hr>
+</div>
+ <div class="container">
+    
+      <form method="POST" action="{% url 'sell' %}">
+          {% csrf_token %}
+          <input type="hidden" name="csrfmiddlewaretoken" value="83TfBY9hlPgPL9ajBApdzAcBhk2f7bmMYseyZ0yq5k8mZ8s2jmL8my8i2G2uANeo">
+          <div class="mb-3">
+             <label for="bookname" class="form-label">Enter the book name</label>
+             <input type="text" class="form-control" id="bookname" name="bookname" aria-describedby="enter name" required="">
+          </div>
+          <div class="mb-3">
+              <label for="sellername" class="form-label">Enter your name</label>
+              <input type="text" class="form-control" id="sellername" name="sellername" aria-describedby="enter name" required="">
+          </div>
+          <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required="">
+          </div>
+          <div class="mb-3">
+             <label for="bookprice" class="form-label">Price</label>
+             <input type="number" class="form-control" id="bookprice" name="bookprice" required="">
+          </div>
+          <div class="mb-3 form-group">
+              <label for="info">Description about the book</label>
+              <textarea class="form-control" id="info" rows="3" name="info" required=""></textarea>
+
+
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload Book Image</label>
+            <input type="file" class="form-control" id="image" name="image">
+         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% comment %} </div>  {% endcomment %}
+{% comment %} {% endblock body %} {% endcomment %}

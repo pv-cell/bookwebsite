@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid  my-4">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="static/book1.jpg" class="d-block w-100" alt="..." style="height:500px;
+            width:600px;">
+            <div class="carousel-caption d-none d-md-block" style="background-color:black;border-radius:11px">
+                <h5>Welcome to the Book Paradise </h5>
+                <p> "Dive into the latest literary sensation that everyone’s talking about."</p>
+            
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="static/book2.jpg" class="d-block w-100" alt="..." style="height:500px;
+            width:600px;">
+            <div class="carousel-caption d-none d-md-block" style="background-color:black;border-radius:11px">
+               <h5>Explore the realm of litreture</h5>
+               <p>Escape into the World of Fiction: Explore our top picks in the realm of imagination and storytelling."</p>
+            </div>
+       </div>
+            
+        
+        <div class="carousel-item">
+            <img src="static/book3.jpg" class="d-block w-100" alt="..." style="height:500px;
+            width:600px;">
+            <div class="carousel-caption d-none d-md-block" style="background-color:black;border-radius:11px">
+                <h5>buy .. rent .. or sell.. your books</h5>
+                <p>Find the best books at a very afordable price</p>
+             </div>
+        </div>
+      </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+</div>
+</div>    
+
+<!-- Container starts from here -->
+<div class="container">
+<h1 class="my-4"><center>You can choose from different Genre</center></h1>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/mystery.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Uncover secrets and solve intricate puzzles with gripping stories that keep you guessing until the very end.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/travel.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Journey across the globe with captivating accounts and vibrant narratives that bring distant places to life.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/sc-fi.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Venture into the future with imaginative worlds and groundbreaking technologies that push the boundaries of reality.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/thriller2.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Dive into pulse-pounding narratives filled with high-stakes action and relentless suspense that will keep you on the edge of your seat.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/academics.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Study about diffeent subjects of academics. Mathematics,Physics,History...</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/fantasy.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Embark on epic adventures in magical realms where the impossible becomes possible and mythical creatures roam free.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/self help.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Empower yourself with practical advice and inspiration to overcome challenges and achieve personal growth.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+            <img src="static/graphic-novels-header1.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">"Experience stories told through striking visuals and dynamic narratives that blend art and literature."</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="static/comics.jpg">
+            <img src="static/comics.jpg" class="d-block w-100" alt="..." style="height:250px;
+            width:200px;">
+          <div class="card-body">
+            <p class="card-text">Enjoy serialized adventures and colorful tales across various genres, brought to life with vibrant illustrations and engaging plots.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                {% comment %} <button type="button" class="btn btn-sm btn-outline-secondary">View</button> {% endcomment %}
+                <button type="button" class="btn btn-sm btn-outline-secondary">Explore</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

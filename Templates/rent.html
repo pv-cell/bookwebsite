@@ -1,0 +1,188 @@
+{% extends "Base.html" %}
+{% block title %}Rent{% endblock title %}
+
+{% block body %}
+<div style="margin:4px; text-align:center; background-color:peru">
+    <h1>Rent Your Favorite Books</h1>
+    <h5>You can rent your favorite books for one month. After returning, you'll get your money back minus rent charges.</h5>
+    <hr>
+</div>
+
+<div class="row">
+    {% for book in books %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <img src="{{ book.image.url }}" class="d-block w-100" alt="{{ book.title }}" style="height:500px">
+            <div class="card-body">
+                <p class="card-text"><strong>{{ book.title }}</strong></p>
+                <p>{{ book.author }}</p>
+                <p>Price: ₹{{ book.price }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No books available for rent at the moment.</p>
+    {% endfor %}
+</div>
+{% endblock body %}
+
+
+{% comment %} {% extends "Base.html"%}
+{% block title%}Rent
+{% endblock title%}
+{% block body %}
+<div style="margin:4px ;text-align:center;background-color:peru">
+    
+    <h1>Rent your favourate books</h1>
+    <h5>You can rent your favioute books for one month and you have to pay some charges for it and after you return that books you will get your money back after cutting some rent charges</h5><hr>
+</div>
+<div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="static/h1.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+        <div class="card-body">
+          <p class="card-text">The Ritual</p> <p>Adam Neill</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="static/h12.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+        <div class="card-body">
+          <p class="card-text">The hobbit<p>J.R.R Tolkien</p></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+             
+            </div>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="static/h6.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+        <div class="card-body">
+          <p class="card-text">End of story</p><p>Kyile scott</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+             
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="static/h4.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+          <div class="card-body">
+            <p class="card-text">Book lovers</p><p>Emily henry</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="static/h11.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+          <div class="card-body">
+            <p class="card-text">Mathematics for cambridge IGCSE</p><p>David Rayner</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="static/h8.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+          <div class="card-body">
+            <p class="card-text">Enceladus</p><p>Brandon Q. Morris</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="static/h9.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+          <div class="card-body">
+            <p class="card-text">Exile of snake</p><p>Patricia renard scholes</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="static/h7.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+          <div class="card-body">
+            <p class="card-text">The calculating stars</p><p>Mary Robinette kowal</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="static/h14.jpg" class="d-block w-100" alt="..." style="height:500px"> 
+          <div class="card-body">
+            <p class="card-text">Hamlet</p><p>Russel punter. Valentino forlin</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Rent</button>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+   
+        {% endblock body %}      
+ 
+          {% endcomment %}
